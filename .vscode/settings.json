@@ -1,0 +1,24 @@
+{
+  "liveServer.settings.port": 5501,
+  "liveSassCompile.settings.watchOnLaunch": true,
+  "liveSassCompile.settings.includeItems": [
+    "/sass/home.scss",
+    "/sass/service-page.scss",
+    "/sass/company-page.scss",
+    "/sass/career-page.scss",
+    "/sass/career-page-inner.scss",
+    "/sass/blog-page.scss",
+    "/sass/blog-inner-page.scss",
+    "/sass/team-template-page.scss",
+    "/sass/contact-us.scss",
+    "/sass/privacy-policy.scss"
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    }
+  ]
+}

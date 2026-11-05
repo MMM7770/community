@@ -1,0 +1,281 @@
+@use "shared";
+
+$career-ink: #292a3a;
+$career-muted: #777783;
+$career-blue: #1d9bf0;
+
+.careers-page {
+  color: $career-ink;
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+  }
+}
+
+.careers-hero {
+  position: relative;
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 42px;
+  padding: 32px 36px 22px;
+  border: 2px solid $career-blue;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 14px;
+    font-size: clamp(26px, 4vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+  }
+
+  &__copy {
+    max-width: 470px;
+    margin-bottom: 12px;
+    color: $career-muted;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+.careers-eyebrow {
+  margin-bottom: 12px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.careers-wordmark {
+  display: block;
+  width: min(100%, 880px);
+  height: auto;
+  margin: 0 auto 15px;
+}
+
+.careers-open-link {
+  color: $career-ink;
+  font-size: 10px;
+
+  span {
+    display: block;
+    margin-top: 5px;
+    color: #ff9a55;
+    font-size: 17px;
+    line-height: 1;
+  }
+}
+
+.careers-corner {
+  position: absolute;
+  right: 0;
+  width: 14px;
+  height: 7px;
+  background: #ff9a55;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    width: 7px;
+    height: 14px;
+    background: $career-blue;
+    content: "";
+  }
+
+  &--top {
+    top: 0;
+  }
+
+  &--bottom {
+    bottom: 0;
+    left: 0;
+    right: auto;
+    background: $career-blue;
+
+    &::after {
+      right: auto;
+      left: 0;
+      background: #ff9a55;
+    }
+  }
+}
+
+.careers-openings {
+  padding: 48px 0;
+  background: #edf8f8;
+}
+
+.careers-jobs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.career-card {
+  min-height: 155px;
+  padding: 22px;
+  background: #fff;
+
+  h2 {
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  p {
+    margin-bottom: 5px;
+    color: $career-muted;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 12px;
+    color: $career-blue;
+    font-size: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.careers-culture {
+  padding: 34px 0 40px;
+  background: #fafafd;
+
+  > .container {
+    width: 100%;
+    max-width: none;
+    padding: 0 24px;
+  }
+
+  .careers-eyebrow {
+    margin-bottom: 16px;
+    font-size: 9px;
+  }
+
+  > .container > h2 {
+    margin-bottom: 18px;
+    font-size: clamp(25px, 3vw, 29px);
+    letter-spacing: -0.5px;
+    line-height: 1.35;
+  }
+
+  &__copy {
+    max-width: 480px;
+    margin-bottom: 46px;
+    color: $career-muted;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+.careers-perks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.career-perk {
+  min-height: 140px;
+  padding: 24px;
+  background: #fff;
+
+  &__icon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: #ffead8;
+    font-size: 14px;
+  }
+
+  h3 {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: $career-muted;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 760px) {
+  .careers-hero {
+    min-height: 320px;
+    margin-top: 20px;
+    margin-bottom: 28px;
+    padding: 28px 20px 20px;
+
+    h1 {
+      font-size: clamp(24px, 5.5vw, 34px);
+    }
+  }
+
+  .careers-openings {
+    padding: 32px 0;
+  }
+
+  .careers-jobs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .career-card {
+    min-height: 145px;
+    padding: 16px;
+  }
+
+  .careers-culture {
+    padding: 42px 0;
+
+    > .container {
+      padding: 0 16px;
+    }
+
+    &__copy {
+      margin-bottom: 28px;
+    }
+  }
+
+  .careers-perks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 440px) {
+  .careers-hero {
+    min-height: 275px;
+    padding-inline: 14px;
+  }
+
+  .careers-jobs,
+  .careers-perks {
+    grid-template-columns: 1fr;
+  }
+
+  .career-perk {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .career-card {
+    min-height: 0;
+  }
+}

@@ -1,0 +1,164 @@
+@use "shared";
+
+$privacy-blue: #079bff;
+$privacy-ink: #292a3a;
+$privacy-muted: #777985;
+$privacy-panel: #edf8fa;
+
+.privacy-policy-page {
+  padding: 36px 0 56px;
+  color: $privacy-ink;
+}
+
+.privacy-policy {
+  width: min(1120px, 94%);
+
+  &__heading {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 8px 2px 0;
+
+    h1 {
+      margin: 0 0 3px;
+      font-size: clamp(24px, 3vw, 32px);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: $privacy-muted;
+      font-size: 9px;
+    }
+  }
+
+  &__accent {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    &--left {
+      left: 2px;
+      background: #ffd1b1;
+    }
+
+    &--right {
+      right: 4px;
+      background: #ff9c50;
+      box-shadow: -8px 0 #8585ff;
+    }
+  }
+
+  &__panel {
+    position: relative;
+    min-height: 655px;
+    border: 3px solid $privacy-blue;
+    background: $privacy-panel;
+    padding: 48px 20px 60px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 447px;
+    margin: 0 auto;
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 9px;
+      line-height: 1.5;
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    height: 11px;
+
+    span {
+      display: block;
+
+      &:nth-child(1) {
+        width: 21px;
+        background: #4542db;
+      }
+
+      &:nth-child(2) {
+        width: 92px;
+        background: #ffd1b1;
+      }
+
+      &:nth-child(3) {
+        width: 35px;
+        background: #ff974b;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .privacy-policy-page {
+    padding: 30px 0 42px;
+  }
+
+  .privacy-policy {
+    &__heading {
+      margin-bottom: 24px;
+    }
+
+    &__panel {
+      min-height: 0;
+      padding: 34px 20px 48px;
+    }
+
+    &__content {
+      h2 {
+        font-size: 17px;
+        line-height: 1.45;
+      }
+
+      h3 {
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 10px;
+        line-height: 1.6;
+        margin-bottom: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .privacy-policy__panel {
+    padding: 28px 14px 44px;
+  }
+
+  .privacy-policy__content {
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 9px;
+    }
+  }
+}
